@@ -2,36 +2,54 @@ package org.siberianhusky.huskycore.api;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.siberianhusky.huskycore.utils.file.CreateFile;
+
+import java.io.File;
 
 
 public interface LoadConfig {
     /**
-     * 加载所有配置
+     * 加载配置文件
      * @param plugin 插件
      */
-    void loadAllConfig(JavaPlugin plugin);
+    default void loadFileConfig(JavaPlugin plugin){}
     /**
-     * 重载所有配置
+     * 重载配置文件
      * @param plugin 插件
      */
-    void reloadAllConfig(JavaPlugin plugin);
+    default void reloadFileConfig(JavaPlugin plugin){}
     /**
      * 加载默认配置
      * @param plugin 插件
      * @return 默认配置
      */
-      default FileConfiguration loadDefaultConfig(JavaPlugin plugin){
+    default void loadDefaultConfig(JavaPlugin plugin){
         plugin.saveDefaultConfig();
-        return plugin.getConfig();
+        plugin.getConfig();
     }
     /**
      * 重载默认配置
      * @param plugin 插件
-     * @return 默认配置
      */
-    default FileConfiguration reloadDefaultConfig(String path,JavaPlugin plugin){
+    default void reloadDefaultConfig(JavaPlugin plugin){
        plugin.reloadConfig();
-         return plugin.getConfig();
+       plugin.getConfig();
+    }
+    /**
+     * 加载所有配置
+     * @param plugin 插件
+     */
+    default void loadAllConfig(JavaPlugin plugin){
+        loadFileConfig(plugin);
+        loadDefaultConfig(plugin);
+    }
+    /**
+     * 重载所有配置
+     * @param plugin 插件
+     */
+    default void reloadAllConfig(String path,JavaPlugin plugin){
+        reloadFileConfig(plugin);
+        reloadDefaultConfig(plugin);
     }
 }
 

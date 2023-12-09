@@ -3,3 +3,5 @@ version: '${project.version}'
 main: org.siberianhusky.huskycore.HuskyCore
 author: SiberianHusky
 api-version: '1.19'
+softdepend:
+  - PlaceholderAPI

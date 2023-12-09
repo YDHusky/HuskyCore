@@ -2,6 +2,7 @@ package org.siberianhusky.huskycore.utils;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.entity.Player;
+import org.siberianhusky.huskycore.data.Data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,10 @@ public class StringUtils {
      * @return 被替换过后的文本
      */
     public static String replacePapi(String text, Player player){
-        return PlaceholderAPI.setPlaceholders(player, text);
+        if(Data.isLoadPapi){
+            return PlaceholderAPI.setPlaceholders(player, text);
+        }
+        return text;
     }
 
     /**
