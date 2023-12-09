@@ -1,6 +1,7 @@
 # HuskyCore
 MC工具插件  
 提供了一些工具方法，方便开发者使用
+---
 ## 使用方法
 ```xml
 <repositories>
