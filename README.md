@@ -18,7 +18,7 @@ MC工具插件
     <dependency>
         <groupId>com.github.YDHusky</groupId>
         <artifactId>HuskyCore</artifactId>
-        <version>HuskyCore-1.0</version>
+        <version>HuskyCore-1.1</version>
     </dependency>
 </dependencys>
 ```
