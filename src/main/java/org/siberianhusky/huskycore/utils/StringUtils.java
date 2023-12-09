@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Replace {
+public class StringUtils {
     /**
      * 替换文本中的颜色&
      * @param text 要替换的文本
