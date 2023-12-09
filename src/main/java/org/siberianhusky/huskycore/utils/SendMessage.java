@@ -1,5 +1,7 @@
 package org.siberianhusky.huskycore.utils;
 
+import net.kyori.adventure.title.Title;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -80,4 +82,32 @@ public class SendMessage {
     public static void sendYamlList(FileConfiguration yaml,String key,CommandSender sender){
         sendList(GetYaml.getList(yaml,key),sender);
     }
+    /**
+     * 发送消息给所有玩家
+     * @param message 消息
+     */
+    public static void send(String message){
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            send(message,player);
+        }
+    }
+
+    /**
+     * 发送Title给玩家
+     * @param title Title
+     * @param player 玩家
+     */
+    public static void send(Title title,Player player){
+        player.showTitle(title);
+    }
+    /**
+     * 发送Title给所有玩家
+     * @param title Title
+     */
+    public static void send(Title title){
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            send(title,player);
+        }
+    }
+
 }
