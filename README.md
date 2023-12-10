@@ -35,4 +35,4 @@ MC工具插件
 - 文件加载([LoadConfig](src/main/java/org/siberianhusky/huskycore/api/LoadConfig.java))
 - GUI([GUI](src/main/java/org/siberianhusky/huskycore/api/GUI.java))
 ## 扩展
-- 原版队伍[HuskyTeam](src/main/java/org/siberianhusky/huskycore/team/HuskyTeam.java)
+- 原版队伍([HuskyTeam](src/main/java/org/siberianhusky/huskycore/team/HuskyTeam.java))
