@@ -34,3 +34,5 @@ MC工具插件
 - 注册事件及指令([Register](src/main/java/org/siberianhusky/huskycore/api/Register.java))
 - 文件加载([LoadConfig](src/main/java/org/siberianhusky/huskycore/api/LoadConfig.java))
 - GUI([GUI](src/main/java/org/siberianhusky/huskycore/api/GUI.java))
+## 扩展
+- 原版队伍[HuskyTeam](src/main/java/org/siberianhusky/huskycore/team/HuskyTeam.java)
