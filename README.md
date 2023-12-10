@@ -1,28 +1,6 @@
-# HuskyCore  
-
+# HuskyCore
 MC工具插件  
 提供了一些工具方法，方便开发者使用
-
-## 使用方法  
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
----
-```xml
-<dependencys>
-    <dependency>
-        <groupId>com.github.YDHusky</groupId>
-        <artifactId>HuskyCore</artifactId>
-        <version>HuskyCore-1.2</version>
-    </dependency>
-</dependencys>
-```
-
 ## 工具方法
 - 字符串工具([StringUtil](src/main/java/org/siberianhusky/huskycore/utils/StringUtils.java))
 - 发送消息工具([SendMessage](src/main/java/org/siberianhusky/huskycore/utils/SendMessage.java))
